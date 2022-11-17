@@ -1,0 +1,7 @@
+Makefile:
+    path to the .h for compilation, add -I./pathtoheader in your compile flags as well so you don’t need the path in #include “foo.h”
+
+Parsing:
+
+
+"1123abc321", "12"
