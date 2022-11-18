@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: anshimiy <anshimiy@student.42.fr>          +#+  +:+       +#+         #
+#    By: alexnshimiyimana <alexnshimiyimana@stud    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/11/17 15:45:40 by anshimiy          #+#    #+#              #
-#    Updated: 2022/11/17 16:58:50 by anshimiy         ###   ########.fr        #
+#    Updated: 2022/11/17 23:49:07 by alexnshimiy      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,9 +26,12 @@ SRCDIR = src/
 SRCS =  src/main.c			\
 
 CC = gcc
-CFLAGS = -Wall -Wextra -Werror -pthread
+CFLAGS = -Wall -Wextra -Werror
 RM = rm -rf
-
+RD_INCLUDE =  -lcurses -lreadline
+A_RD =  readline/libreadline.a readline/libhistory.a
+H_INCLUDE = -I includes/minishell.h
+A_INCLUDE = ./includes/my_lib/mylib.a
 # .o files in bin
 OBJDIR	=	bin/
 OBJS	=	$(patsubst $(SRCDIR)%.c,$(OBJDIR)%.o,$(SRCS))
@@ -41,7 +44,7 @@ all: $(NAME)
 
 $(NAME):	$(OBJS)
 	$(HIDE) make -C ./includes/my_lib
-	$(HIDE) $(CC) $(CFLAGS) $(OBJS) -o $(NAME) ./includes/my_lib/mylib.a
+	$(HIDE) $(CC) $(CFLAGS) $(OBJS) $(RD_INCLUDE) -o $(NAME) $(A_INCLUDE) $(H_INCLUDE)
 	@echo "$(GREEN)$(NAME) compiled!$(CEND)"
 
 # Compiles sources into objects

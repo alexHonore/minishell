@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: anshimiy <anshimiy@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alexnshimiyimana <alexnshimiyimana@stud    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 15:26:12 by anshimiy          #+#    #+#             */
-/*   Updated: 2022/11/17 15:53:24 by anshimiy         ###   ########.fr       */
+/*   Updated: 2022/11/17 23:37:34 by alexnshimiy      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <ctype.h>
 # include <fcntl.h>
 # include <readline/readline.h>
+# include <readline/history.h>
 # include <stdbool.h>
 # include <stdio.h>
 # include <stdlib.h>
@@ -32,6 +33,7 @@
 # define DOLLAR 36
 # define DOUBLEPIPE 123
 # define DOUBLEAMPERSAND 125
+// # define CTRLC 135 or 3?
 
 typedef enum e_shell_status {
     RUNNING,
