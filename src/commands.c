@@ -6,7 +6,7 @@
 /*   By: anshimiy <anshimiy@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/17 17:21:33 by anshimiy          #+#    #+#             */
-/*   Updated: 2022/11/17 17:37:46 by anshimiy         ###   ########.fr       */
+/*   Updated: 2022/11/17 19:16:34 by anshimiy         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,10 @@ void cmd_cd(char** env)
 {
     // change current directory only if relatuve or abs
 }
+/*
+touch herdoc == touch text.txt
+[cat -e] [|] [ls -la] > file << heredoc | cat -e && echo
+*/
 
 void cmd_pwd(char** env)
 {

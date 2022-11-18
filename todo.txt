@@ -5,3 +5,10 @@ Parsing:
 
 
 "1123abc321", "12"
+
+
+ignore ctr d and ctrl \
+
+>> append > ecrase
+cat << heredoc??   cat < infile
+
